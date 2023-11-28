@@ -1,0 +1,22 @@
+﻿@model firstapp.Models.Entities.Users;
+
+<h1>ثبت نام کاربر جدید</h1>
+
+<form asp-action="register" method="post">
+
+    <label asp-for="Email"></label>
+    <input asp-for="Email" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+    <br />
+
+    <button>تکمبل ثبت نام</button>
+</form>
+
+@section Scripts
+{
+
+@{
+    Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+
+}
